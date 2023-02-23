@@ -9,7 +9,7 @@ body {
 }
 
 .titles {
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: center;
     max-width: 1000px;
 
@@ -28,13 +28,13 @@ body {
     border: 2px solid rgb(93, 97, 124);
     background-color: rgb(229, 223, 226);
     border-radius: 12px;
-    padding: 50px;
+    padding: 30px;
 
 
     & .measurements {
 
         & h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: rgb(55, 58, 77);
         }
 

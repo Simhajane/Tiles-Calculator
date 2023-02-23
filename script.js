@@ -2,7 +2,7 @@
 
 function getSquareOfTheWall(height1, width1, height2, width2, height3, width3, height4, width4, doorH, doorW, windowH, windowW) {
 
-    return (height1 * width1) + (height2 * width2) + (height3 * width3) + (height4 * width4) - (doorH * doorW) - (windowH * windowW);
+    return `${(height1 * width1) + (height2 * width2) + (height3 * width3) + (height4 * width4) - (doorH * doorW) - (windowH * windowW)} sq.m`;
 
 }
 function renderResult() {
