@@ -1,25 +1,26 @@
 
 
-function getSquareOfTheWall(height1, width1, height2, width2, height3, width3, height4, width4, doorH, doorW, windowH, windowW) {
+function getSquareOfTheWall(obj) {
 
-    return `${(height1 * width1) + (height2 * width2) + (height3 * width3) + (height4 * width4) - (doorH * doorW) - (windowH * windowW)} sq.m`;
+    return `${(obj.height1 * obj.width1) + (obj.height2 * obj.width2) + (obj.height3 * obj.width3) + (obj.height4 * obj.width4) - (obj.doorH * obj.doorW) - (obj.windowH * obj.windowW)} sq.m`;
 
 }
 function renderResult() {
-    let height1 = document.getElementById('h1').value;
-    let width1 = document.getElementById('w1').value;
-    let height2 = document.getElementById('h2').value;
-    let width2 = document.getElementById('w2').value;
-    let height3 = document.getElementById('h3').value;
-    let width3 = document.getElementById('w3').value;
-    let height4 = document.getElementById('h4').value;
-    let width4 = document.getElementById('w4').value;
-    let doorH = document.getElementById('door-h').value;
-    let doorW = document.getElementById('door-w').value;
-    let windowH = document.getElementById('win-h').value;
-    let windowW = document.getElementById('win-w').value;
-    document.getElementById('res1').innerHTML = getSquareOfTheWall(
-        height1, width1, height2, width2, height3, width3, height4, width4, doorH, doorW, windowH, windowW
-    )
+    const obj = {
+        height1: document.getElementById('h1').value,
+        width1: document.getElementById('w1').value,
+        height2: document.getElementById('h2').value,
+        width2: document.getElementById('w2').value,
+        height3: document.getElementById('h3').value,
+        width3: document.getElementById('w3').value,
+        height4: document.getElementById('h4').value,
+        width4: document.getElementById('w4').value,
+        doorH: document.getElementById('door-h').value,
+        doorW: document.getElementById('door-w').value,
+        windowH: document.getElementById('win-h').value,
+        windowW: document.getElementById('win-w').value
+    }
+
+    document.getElementById('res1').innerHTML = getSquareOfTheWall(obj);
 }
 
