@@ -1,12 +1,5 @@
-
-
-function getSquareOfTheWall(obj) {
-
-    return `${(obj.height1 * obj.width1) + (obj.height2 * obj.width2) + (obj.height3 * obj.width3) + (obj.height4 * obj.width4) - (obj.doorH * obj.doorW) - (obj.windowH * obj.windowW)} sq.m`;
-
-}
 function renderResult() {
-    const obj = {
+    const wallMeasurements = {
         height1: document.getElementById('h1').value,
         width1: document.getElementById('w1').value,
         height2: document.getElementById('h2').value,
@@ -21,6 +14,6 @@ function renderResult() {
         windowW: document.getElementById('win-w').value
     }
 
-    document.getElementById('res1').innerHTML = getSquareOfTheWall(obj);
+    document.getElementById('res1').innerHTML = getSquareOfTheWall(wallMeasurements);
 }
 
